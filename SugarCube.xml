@@ -16,26 +16,22 @@
 		</SPAN>
 
 		<!-- Macros -->
-		<SPAN TYPE="KEYWORD2">
+		<SPAN TYPE="KEYWORD2" DELEGATE="KEYWORD1">
 			<BEGIN>&lt;&lt;</BEGIN>
 			<END>&gt;&gt;</END>
 		</SPAN>
 
 		<!-- Links -->
-		<SPAN TYPE="KEYWORD3">
+		<SPAN TYPE="KEYWORD3" DELEGATE="TAGS">
 			<BEGIN>&#91;&#91;</BEGIN>
 			<END>&#93;&#93;</END>
 		</SPAN>
+		<MARK_FOLLOWING TYPE="KEYWORD1">$</MARK_FOLLOWING>
 
-		<!-- Macros-->
+		<!-- Passage Names -->
 		<EOL_SPAN TYPE="KEYWORD3">&#58;&#58;</EOL_SPAN>
 	</RULES>
 	<RULES SET="TAGS" DEFAULT="MARKUP" NO_WORD_SEP="-_">
-		<!-- SGML comment -->
-		<SPAN TYPE="COMMENT1">
-			<BEGIN>&lt;!--</BEGIN>
-			<END>--&gt;</END>
-		</SPAN>
 
 		<SPAN TYPE="LITERAL1" NO_LINE_BREAK="FALSE">
 			<BEGIN>"</BEGIN>
@@ -48,11 +44,6 @@
 		</SPAN>
 	</RULES>
 	<RULES SET="DTD-TAGS" DEFAULT="KEYWORD2" IGNORE_CASE="FALSE">
-		<!-- SGML comment -->
-		<SPAN TYPE="COMMENT1">
-			<BEGIN>&lt;!--</BEGIN>
-			<END>--&gt;</END>
-		</SPAN>
 
 		<SPAN TYPE="LITERAL1" NO_LINE_BREAK="FALSE">
 			<BEGIN>"</BEGIN>
@@ -75,7 +66,7 @@
 		<KEYWORDS>
 			<KEYWORD1>if</KEYWORD1>
 			<KEYWORD1>else</KEYWORD1>
-			<KEYWORD1>INCLUDE</KEYWORD1>
+			<KEYWORD1>set</KEYWORD1>
 			<KEYWORD1>IGNORE</KEYWORD1>
 			<KEYWORD1>NDATA</KEYWORD1>
 			<KEYWORD1>#IMPLIED</KEYWORD1>
@@ -84,11 +75,6 @@
 		</KEYWORDS>
 	</RULES>
 	<RULES SET="ENTITY-TAGS" DEFAULT="KEYWORD2">
-		<!-- Comment -->
-		<SPAN TYPE="COMMENT1">
-			<BEGIN>&lt;!--</BEGIN>
-			<END>--&gt;</END>
-		</SPAN>
 
 		<SPAN TYPE="LITERAL1" NO_LINE_BREAK="FALSE">
 			<BEGIN>"</BEGIN>
